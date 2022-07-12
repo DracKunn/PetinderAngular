@@ -34,7 +34,7 @@ export class PetService {
   }
 
   getPetByName(petName: string): Observable<Pet> {
-    return this.http.get<Pet>(this.url + '/' + petName)
+    return this.http.get<Pet>(`${this.url}/${petName}`)
 
   }
 }
