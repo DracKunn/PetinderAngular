@@ -1,8 +1,8 @@
-import { Injectable } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
-import { environment } from "src/environments/environment";
-import { map, Observable } from "rxjs";
-import { Pet } from "../../model/Pet";
+import {Injectable} from "@angular/core";
+import {HttpClient} from "@angular/common/http";
+import {environment} from "src/environments/environment";
+import {map, Observable} from "rxjs";
+import {Pet} from "../../model/Pet";
 
 @Injectable({
   providedIn: "root"
@@ -29,7 +29,12 @@ export class PetService {
       );
   }
 
-  addPet(pet:Pet) {
+  addPet(pet: Pet) {
     return this.http.post(this.url, pet);
+  }
+
+  getPetByName(petName: string): Observable<Pet> {
+    return this.http.get<Pet>(this.url + '/' + petName)
+
   }
 }

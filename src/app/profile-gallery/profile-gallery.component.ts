@@ -1,6 +1,6 @@
 import {Component, OnInit} from "@angular/core";
-import {Pet} from "../../../model/Pet";
-import {PetService} from "../../service/pet.service";
+import {Pet} from "../../model/Pet";
+import {PetService} from "../service/pet.service";
 import {UntypedFormBuilder} from "@angular/forms";
 
 
