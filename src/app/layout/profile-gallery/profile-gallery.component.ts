@@ -1,7 +1,7 @@
-import { Component, OnInit } from "@angular/core";
-import { Pet } from "../../../model/Pet";
-import { PetService } from "../../service/pet.service";
-import { FormBuilder } from "@angular/forms";
+import {Component, OnInit} from "@angular/core";
+import {Pet} from "../../../model/Pet";
+import {PetService} from "../../service/pet.service";
+import {UntypedFormBuilder} from "@angular/forms";
 
 
 @Component({
@@ -23,7 +23,7 @@ export class ProfileGalleryComponent implements OnInit {
     popularity: ''
   });
 
-  constructor(private petService: PetService, public formBuilder: FormBuilder) {
+  constructor(private petService: PetService, public formBuilder: UntypedFormBuilder) {
     this.selectedPet = undefined;
     this.searchText = '';
 

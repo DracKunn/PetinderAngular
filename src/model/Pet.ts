@@ -1,7 +1,7 @@
 import {Kind} from "./Kind";
 
 export interface Pet{
-  name : string | any;
+  name : string;
   kind : Kind;
   image : string;
   profileText : string;
